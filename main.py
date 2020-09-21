@@ -261,6 +261,9 @@ def playerclass():
 
 settings.playerClass = input("What is your style of choice? (Magic, Melee, Range):")
 
+
 playerclass()
 playerstats()
 currenttasks()
+
+
