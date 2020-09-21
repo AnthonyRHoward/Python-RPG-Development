@@ -1,7 +1,7 @@
-# Text Based RPG.
- Choose Your Own Adventure Game 
+## Text Based RPG.
+ My Attempt at an "Choose Your Own Adventure" game.
 
-# Hello from Anthony.
+## Hello from Anthony.
 This was created without the use of any video tutorials, templates, or guides. 
 I wanted to prove to myself that I could make this on my own and be able to
 learn the in's and out's of programming.
