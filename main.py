@@ -12,6 +12,13 @@ def currenttasks():
     playersaid()
 
 
+def repbonus():
+    if settings.playerRep == 50:
+        settings.magicAttack += 10
+        settings.meleeAttack += 10
+        settings.rangeAttack += 10
+
+
 def monsterbonus():
     if settings.monstersKilled == 10:
         settings.playerHP += 10
@@ -25,30 +32,39 @@ def monsterstats():
     if settings.playerClass == "Range" and settings.activeMonster == "Rat":
         settings.enemyAttack = random.randint(1, 2)
         settings.playerMoney += random.randint(0, 1)
+        settings.playerRep += random.randint(0, 2)
     elif settings.playerClass == "Magic" and settings.activeMonster == "Rat":
         settings.enemyAttack = random.randint(1, 2)
         settings.playerMoney += random.randint(0, 1)
+        settings.playerRep += random.randint(0, 2)
     elif settings.playerClass == "Melee" and settings.activeMonster == "Rat":
         settings.enemyAttack = random.randint(1, 2)
         settings.playerMoney += random.randint(0, 1)
+        settings.playerRep += random.randint(0, 2)
     elif settings.playerClass == "Range" and settings.activeMonster == "Dog":
         settings.enemyAttack = random.randint(1, 2)
         settings.playerMoney += random.randint(0, 1)
+        settings.playerRep += random.randint(-1, 0)
     elif settings.playerClass == "Magic" and settings.activeMonster == "Dog":
         settings.enemyAttack = random.randint(1, 3)
         settings.playerMoney += random.randint(0, 1)
+        settings.playerRep += random.randint(-1, 0)
     elif settings.playerClass == "Melee" and settings.activeMonster == "Dog":
         settings.enemyAttack = random.randint(1, 2)
         settings.playerMoney += random.randint(0, 1)
+        settings.playerRep += random.randint(-1, 0)
     elif settings.playerClass == "Range" and settings.activeMonster == "Dragon":
         settings.enemyAttack = random.randint(1, 4)
         settings.playerMoney += random.randint(0, 5)
+        settings.playerRep += random.randint(0, 2)
     elif settings.playerClass == "Magic" and settings.activeMonster == "Dragon":
         settings.enemyAttack = random.randint(1, 6)
         settings.playerMoney += random.randint(0, 5)
+        settings.playerRep += random.randint(0, 2)
     elif settings.playerClass == "Melee" and settings.activeMonster == "Dragon":
         settings.enemyAttack = random.randint(1, 3)
         settings.playerMoney += random.randint(0, 5)
+        settings.playerRep += random.randint(0, 2)
     elif settings.playerClass == "Range" and settings.activeMonster == "Human":
         settings.enemyAttack = random.randint(1, 6)
         settings.playerMoney += random.randint(0, 3)
@@ -61,12 +77,15 @@ def monsterstats():
     elif settings.playerClass == "Range" and settings.activeMonster == "Druid":
         settings.enemyAttack = random.randint(1, 2)
         settings.playerMoney += random.randint(0, 2)
+        settings.playerRep += random.randint(0, 2)
     elif settings.playerClass == "Magic" and settings.activeMonster == "Druid":
         settings.enemyAttack = random.randint(1, 3)
         settings.playerMoney += random.randint(0, 2)
+        settings.playerRep += random.randint(0, 2)
     elif settings.playerClass == "Melee" and settings.activeMonster == "Druid":
         settings.enemyAttack = random.randint(1, 5)
         settings.playerMoney += random.randint(0, 2)
+        settings.playerRep += random.randint(0, 2)
     elif settings.playerClass == "Range" and settings.activeMonster == "Guard":
         settings.enemyAttack = random.randint(1, 3)
         settings.playerMoney += random.randint(0, 9)
@@ -92,6 +111,7 @@ def attack():
     else:
         settings.monstersKilled += 1
         settings.activeMonster = ""
+        repbonus()
 
 
 def playerstats():
