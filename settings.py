@@ -15,5 +15,6 @@ monstersKilled = 0
 playerInput = ""
 possibleMonsters = ["Rat", "Dog", "Dragon", "Human", "Druid", "Guard"]
 activeMonster = ""
-shop = ["Dagger - 6 Gold", "Shield - 10 Gold", "Cape - 4 Gold", "Whip - 25 Gold"]
+shop = ["Dagger - 6 Gold", "Shield - 10 Gold", "Cape - 4 Gold", "Whip - 25 Gold", "Health Potion"]
 playerItems = []
+playerInv = []

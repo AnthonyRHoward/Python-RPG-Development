@@ -29,74 +29,144 @@ def monsterbonus():
 
 
 def monsterstats():
-    if settings.playerClass == "Range" and settings.activeMonster == "Rat":
-        settings.enemyAttack = random.randint(1, 2)
-        settings.playerMoney += random.randint(0, 1)
-        settings.playerRep += random.randint(0, 2)
-    elif settings.playerClass == "Magic" and settings.activeMonster == "Rat":
-        settings.enemyAttack = random.randint(1, 2)
-        settings.playerMoney += random.randint(0, 1)
-        settings.playerRep += random.randint(0, 2)
-    elif settings.playerClass == "Melee" and settings.activeMonster == "Rat":
-        settings.enemyAttack = random.randint(1, 2)
-        settings.playerMoney += random.randint(0, 1)
-        settings.playerRep += random.randint(0, 2)
-    elif settings.playerClass == "Range" and settings.activeMonster == "Dog":
-        settings.enemyAttack = random.randint(1, 2)
-        settings.playerMoney += random.randint(0, 1)
-        settings.playerRep += random.randint(-1, 0)
-    elif settings.playerClass == "Magic" and settings.activeMonster == "Dog":
-        settings.enemyAttack = random.randint(1, 3)
-        settings.playerMoney += random.randint(0, 1)
-        settings.playerRep += random.randint(-1, 0)
-    elif settings.playerClass == "Melee" and settings.activeMonster == "Dog":
-        settings.enemyAttack = random.randint(1, 2)
-        settings.playerMoney += random.randint(0, 1)
-        settings.playerRep += random.randint(-1, 0)
-    elif settings.playerClass == "Range" and settings.activeMonster == "Dragon":
-        settings.enemyAttack = random.randint(1, 4)
-        settings.playerMoney += random.randint(0, 5)
-        settings.playerRep += random.randint(0, 2)
-    elif settings.playerClass == "Magic" and settings.activeMonster == "Dragon":
-        settings.enemyAttack = random.randint(1, 6)
-        settings.playerMoney += random.randint(0, 5)
-        settings.playerRep += random.randint(0, 2)
-    elif settings.playerClass == "Melee" and settings.activeMonster == "Dragon":
-        settings.enemyAttack = random.randint(1, 3)
-        settings.playerMoney += random.randint(0, 5)
-        settings.playerRep += random.randint(0, 2)
-    elif settings.playerClass == "Range" and settings.activeMonster == "Human":
-        settings.enemyAttack = random.randint(1, 6)
-        settings.playerMoney += random.randint(0, 3)
-    elif settings.playerClass == "Magic" and settings.activeMonster == "Human":
-        settings.enemyAttack = random.randint(1, 3)
-        settings.playerMoney += random.randint(0, 3)
-    elif settings.playerClass == "Melee" and settings.activeMonster == "Human":
-        settings.enemyAttack = random.randint(1, 2)
-        settings.playerMoney += random.randint(0, 3)
-    elif settings.playerClass == "Range" and settings.activeMonster == "Druid":
-        settings.enemyAttack = random.randint(1, 2)
-        settings.playerMoney += random.randint(0, 2)
-        settings.playerRep += random.randint(0, 2)
-    elif settings.playerClass == "Magic" and settings.activeMonster == "Druid":
-        settings.enemyAttack = random.randint(1, 3)
-        settings.playerMoney += random.randint(0, 2)
-        settings.playerRep += random.randint(0, 2)
-    elif settings.playerClass == "Melee" and settings.activeMonster == "Druid":
-        settings.enemyAttack = random.randint(1, 5)
-        settings.playerMoney += random.randint(0, 2)
-        settings.playerRep += random.randint(0, 2)
-    elif settings.playerClass == "Range" and settings.activeMonster == "Guard":
-        settings.enemyAttack = random.randint(1, 3)
-        settings.playerMoney += random.randint(0, 9)
-    elif settings.playerClass == "Magic" and settings.activeMonster == "Guard":
-        settings.enemyAttack = random.randint(1, 3)
-        settings.playerMoney += random.randint(0, 9)
-    elif settings.playerClass == "Melee" and settings.activeMonster == "Guard":
-        settings.enemyAttack = random.randint(1, 2)
-        settings.playerMoney += random.randint(0, 9)
+    if "Sword" in settings.playerItems:
+        if settings.playerClass == "Range" and settings.activeMonster == "Rat":
+            settings.enemyAttack = random.randint(1, 2)
+            settings.playerMoney += random.randint(2, 5)
+            settings.playerRep += random.randint(0, 2)
+        elif settings.playerClass == "Magic" and settings.activeMonster == "Rat":
+            settings.enemyAttack = random.randint(1, 2)
+            settings.playerMoney += random.randint(2, 5)
+            settings.playerRep += random.randint(0, 2)
+        elif settings.playerClass == "Melee" and settings.activeMonster == "Rat":
+            settings.enemyAttack = random.randint(1, 2)
+            settings.playerMoney += random.randint(2, 5)
+            settings.playerRep += random.randint(0, 2)
+        elif settings.playerClass == "Range" and settings.activeMonster == "Dog":
+            settings.enemyAttack = random.randint(1, 2)
+            settings.playerMoney += random.randint(1, 2)
+            settings.playerRep += random.randint(-1, 0)
+        elif settings.playerClass == "Magic" and settings.activeMonster == "Dog":
+            settings.enemyAttack = random.randint(1, 3)
+            settings.playerMoney += random.randint(1, 2)
+            settings.playerRep += random.randint(-1, 0)
+        elif settings.playerClass == "Melee" and settings.activeMonster == "Dog":
+            settings.enemyAttack = random.randint(1, 2)
+            settings.playerMoney += random.randint(1, 2)
+            settings.playerRep += random.randint(-1, 0)
+        elif settings.playerClass == "Range" and settings.activeMonster == "Dragon":
+            settings.enemyAttack = random.randint(1, 4)
+            settings.playerMoney += random.randint(4, 8)
+            settings.playerRep += random.randint(0, 2)
+        elif settings.playerClass == "Magic" and settings.activeMonster == "Dragon":
+            settings.enemyAttack = random.randint(1, 6)
+            settings.playerMoney += random.randint(4, 8)
+            settings.playerRep += random.randint(0, 2)
+        elif settings.playerClass == "Melee" and settings.activeMonster == "Dragon":
+            settings.enemyAttack = random.randint(1, 3)
+            settings.playerMoney += random.randint(4, 8)
+            settings.playerRep += random.randint(0, 2)
+        elif settings.playerClass == "Range" and settings.activeMonster == "Human":
+            settings.enemyAttack = random.randint(1, 6)
+            settings.playerMoney += random.randint(2, 5)
+        elif settings.playerClass == "Magic" and settings.activeMonster == "Human":
+            settings.enemyAttack = random.randint(1, 3)
+            settings.playerMoney += random.randint(2, 5)
+        elif settings.playerClass == "Melee" and settings.activeMonster == "Human":
+            settings.enemyAttack = random.randint(1, 2)
+            settings.playerMoney += random.randint(2, 5)
+        elif settings.playerClass == "Range" and settings.activeMonster == "Druid":
+            settings.enemyAttack = random.randint(1, 2)
+            settings.playerMoney += random.randint(2, 4)
+            settings.playerRep += random.randint(0, 2)
+        elif settings.playerClass == "Magic" and settings.activeMonster == "Druid":
+            settings.enemyAttack = random.randint(1, 3)
+            settings.playerMoney += random.randint(2, 4)
+            settings.playerRep += random.randint(0, 2)
+        elif settings.playerClass == "Melee" and settings.activeMonster == "Druid":
+            settings.enemyAttack = random.randint(1, 5)
+            settings.playerMoney += random.randint(2, 4)
+            settings.playerRep += random.randint(0, 2)
+        elif settings.playerClass == "Range" and settings.activeMonster == "Guard":
+            settings.enemyAttack = random.randint(1, 3)
+            settings.playerMoney += random.randint(5, 13)
+        elif settings.playerClass == "Magic" and settings.activeMonster == "Guard":
+            settings.enemyAttack = random.randint(1, 3)
+            settings.playerMoney += random.randint(5, 13)
+        elif settings.playerClass == "Melee" and settings.activeMonster == "Guard":
+            settings.enemyAttack = random.randint(1, 2)
+            settings.playerMoney += random.randint(5, 13)
+        else:
+            print("Error, I don't have that combination in my database.")
     else:
-        print("Error, I don't have that combination in my database.")
+        if settings.playerClass == "Range" and settings.activeMonster == "Rat":
+            settings.enemyAttack = random.randint(1, 2)
+            settings.playerMoney += random.randint(0, 1)
+            settings.playerRep += random.randint(0, 2)
+        elif settings.playerClass == "Magic" and settings.activeMonster == "Rat":
+            settings.enemyAttack = random.randint(1, 2)
+            settings.playerMoney += random.randint(0, 1)
+            settings.playerRep += random.randint(0, 2)
+        elif settings.playerClass == "Melee" and settings.activeMonster == "Rat":
+            settings.enemyAttack = random.randint(1, 2)
+            settings.playerMoney += random.randint(0, 1)
+            settings.playerRep += random.randint(0, 2)
+        elif settings.playerClass == "Range" and settings.activeMonster == "Dog":
+            settings.enemyAttack = random.randint(1, 2)
+            settings.playerMoney += random.randint(0, 1)
+            settings.playerRep += random.randint(-1, 0)
+        elif settings.playerClass == "Magic" and settings.activeMonster == "Dog":
+            settings.enemyAttack = random.randint(1, 3)
+            settings.playerMoney += random.randint(0, 1)
+            settings.playerRep += random.randint(-1, 0)
+        elif settings.playerClass == "Melee" and settings.activeMonster == "Dog":
+            settings.enemyAttack = random.randint(1, 2)
+            settings.playerMoney += random.randint(0, 1)
+            settings.playerRep += random.randint(-1, 0)
+        elif settings.playerClass == "Range" and settings.activeMonster == "Dragon":
+            settings.enemyAttack = random.randint(1, 4)
+            settings.playerMoney += random.randint(0, 5)
+            settings.playerRep += random.randint(0, 2)
+        elif settings.playerClass == "Magic" and settings.activeMonster == "Dragon":
+            settings.enemyAttack = random.randint(1, 6)
+            settings.playerMoney += random.randint(0, 5)
+            settings.playerRep += random.randint(0, 2)
+        elif settings.playerClass == "Melee" and settings.activeMonster == "Dragon":
+            settings.enemyAttack = random.randint(1, 3)
+            settings.playerMoney += random.randint(0, 5)
+            settings.playerRep += random.randint(0, 2)
+        elif settings.playerClass == "Range" and settings.activeMonster == "Human":
+            settings.enemyAttack = random.randint(1, 6)
+            settings.playerMoney += random.randint(0, 3)
+        elif settings.playerClass == "Magic" and settings.activeMonster == "Human":
+            settings.enemyAttack = random.randint(1, 3)
+            settings.playerMoney += random.randint(0, 3)
+        elif settings.playerClass == "Melee" and settings.activeMonster == "Human":
+            settings.enemyAttack = random.randint(1, 2)
+            settings.playerMoney += random.randint(0, 3)
+        elif settings.playerClass == "Range" and settings.activeMonster == "Druid":
+            settings.enemyAttack = random.randint(1, 2)
+            settings.playerMoney += random.randint(0, 2)
+            settings.playerRep += random.randint(0, 2)
+        elif settings.playerClass == "Magic" and settings.activeMonster == "Druid":
+            settings.enemyAttack = random.randint(1, 3)
+            settings.playerMoney += random.randint(0, 2)
+            settings.playerRep += random.randint(0, 2)
+        elif settings.playerClass == "Melee" and settings.activeMonster == "Druid":
+            settings.enemyAttack = random.randint(1, 5)
+            settings.playerMoney += random.randint(0, 2)
+            settings.playerRep += random.randint(0, 2)
+        elif settings.playerClass == "Range" and settings.activeMonster == "Guard":
+            settings.enemyAttack = random.randint(1, 3)
+            settings.playerMoney += random.randint(0, 9)
+        elif settings.playerClass == "Magic" and settings.activeMonster == "Guard":
+            settings.enemyAttack = random.randint(1, 3)
+            settings.playerMoney += random.randint(0, 9)
+        elif settings.playerClass == "Melee" and settings.activeMonster == "Guard":
+            settings.enemyAttack = random.randint(1, 2)
+            settings.playerMoney += random.randint(0, 9)
+        else:
+            print("Error, I don't have that combination in my database.")
 
 
 def attack():
@@ -105,6 +175,9 @@ def attack():
     settings.playerHP -= settings.enemyAttack
     print("You lost", settings.enemyAttack, "HP", "while killing a", settings.activeMonster)
     monsterbonus()
+    # if not settings.playerItems:
+    #     settings.playerItems.append("Sword")
+    # print(settings.playerItems)
     if settings.playerHP <= 0:
         print("You died while killing", settings.activeMonster)
         exit(0)
